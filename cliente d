@@ -6,10 +6,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- *
- */
 public class ClientDAO implements ICrud{
     
     Connection conn;
@@ -43,7 +39,6 @@ public class ClientDAO implements ICrud{
     }
     
 
-    @Override
     public List list() {
         List<Client> clients = new ArrayList<>();
         String sql = "SELECT * FROM clients";
@@ -70,7 +65,7 @@ public class ClientDAO implements ICrud{
 
     
 
-    @Override
+    
     public int add(Object[] o) {
         int r = 0;
         String sql = "INSERT INTO clients (CLIE_Dni,CLIE_Names,CLIE_Address,CLIE_Flag) VALUES (?,?,?,?)";
@@ -90,7 +85,7 @@ public class ClientDAO implements ICrud{
         return r;
     }
 
-    @Override
+  
     public int update(Object[] o) {
         int r = 0;
         String sql = "UPDATE clients SET CLIE_Dni=?,CLIE_Names=?,CLIE_Address=?,CLIE_Flag=? WHERE CLIE_Code=?";
@@ -111,7 +106,6 @@ public class ClientDAO implements ICrud{
         return r;
     }
 
-    @Override
     public void delete(int id) {
         String sql = "DELETE FROM clients WHERE CLIE_Code=?";
         try {
@@ -119,7 +113,7 @@ public class ClientDAO implements ICrud{
             ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
             ps.executeUpdate();
-        } catch (Exception e) {
+        } {
         }
     }
 
