@@ -6,10 +6,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * 
- */
 public class OrderDAO implements ICrud{
     
     Connection conn;
@@ -88,7 +84,7 @@ public class OrderDAO implements ICrud{
         return r;        
     }
 
-    @Override
+
     public List list() {
         List<Order> orders = new ArrayList<>();
         String sql = "SELECT * FROM sales";
@@ -116,17 +112,12 @@ public class OrderDAO implements ICrud{
         return orders;
     }
 
-    @Override
-    public int add(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  
+    public int add(Object[] o) 
+        
+   
 
-    @Override
-    public int update(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
+    public int update(Object[] o) 
     public void delete(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
