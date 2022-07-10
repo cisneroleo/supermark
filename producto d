@@ -6,10 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author daniel
- */
+
 public class ProductDAO implements ICrud{
     
     Connection conn;
